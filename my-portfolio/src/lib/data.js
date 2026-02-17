@@ -77,7 +77,7 @@ export const skills = [
     glow: "js",
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     img: "./skills/tailwind.svg",
     level: 75,
     type: "Framework",
