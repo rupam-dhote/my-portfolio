@@ -13,10 +13,13 @@ const MobileMenu = ({ isOpen, onClose, navLinks, isActive, onClick }) => {
     <AnimatePresence mode="wait">
       {isOpen && (
         <motion.div
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          exit={{ x: "-100vw" }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          initial={{ x: "-100%" }}
+          animate={{ x: "0%" }}
+          exit={{ x: "-100%" }}
+          transition={{
+            duration: 0.6,
+            ease: [0.7, 1, 0.7, 1], // smooth spring-like ease
+          }}
           className=" px-4 w-full min-h-screen fixed inset-0  z-9999 bg-slate-900  flex flex-col items-center justify-center  gap-6 text-white md:hidden"
         >
           <button className="absolute top-4 right-4" onClick={onClose}>
@@ -38,7 +41,12 @@ const MobileMenu = ({ isOpen, onClose, navLinks, isActive, onClick }) => {
           ))}
 
           {/* cta button */}
-          <a href="#cont">
+          <a
+            href="#cont"
+            onClick={() => {
+              onClose();
+            }}
+          >
             <button className="w-full px-5 py-2 rounded-full  transition-all duration-500  shadow-slate-300 bg-linear-to-r from-indigo-500 via-indigo-600 to-indigo-700 text-white font-semibold hover:bg-linear-to-r hover:from-indigo-400 hover:via-indigo-500 hover:to-indigo-700 ">
               Hire me
             </button>

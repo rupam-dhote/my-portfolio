@@ -20,6 +20,11 @@
 /* poppin font */
 
 @layer base {
+  * {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
   ::-webkit-scrollbar {
     width: 0px;
   }
