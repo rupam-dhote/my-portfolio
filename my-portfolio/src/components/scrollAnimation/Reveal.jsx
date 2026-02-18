@@ -14,7 +14,7 @@ const Reveal = ({
   const shouldReduceMotion = useReducedMotion();
 
   const isInView = useInView(ref, {
-    amount: 0.6,
+    amount: 0.4,
   });
 
   const [hasPlayed, setHasPlayed] = useState(false);

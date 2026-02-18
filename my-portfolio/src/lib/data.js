@@ -7,6 +7,8 @@ export const projects = [
     type: "MERN",
     image: "/projects/streamify.png",
     tech: ["React.js", "Node.js", "Express.js", "MongoDb"],
+    gitLink: "/",
+    appLink: "/",
   },
   {
     title: "ResumeX ",
@@ -15,14 +17,98 @@ export const projects = [
     type: "MERN",
     image: "/projects/resume-builder.png",
     tech: ["React.js", "Node.js", "Express.js", "MongoDb"],
+    gitLink: "/",
+    appLink: "/",
   },
   {
     title: "Tic-Tac-Toe",
     description:
       "An interactive Tic Tac Toe game built with HTML, CSS, and JavaScript.",
     type: "HTML",
-    image: "/projects/tictactoe.png",
+    image: "/projects/html/tictactoe.png",
     tech: ["HTML", "CSS", "JS"],
+    gitLink:
+      "https://github.com/rupam-dhote/HTML_CCS_JS_Projects/tree/main/Tictactoe",
+    appLink: "https://html-tic-tac-toe-gold.vercel.app/",
+  },
+  {
+    title: "Number Converter",
+    description:
+      "A simple number converter that transforms values between different number systems using JavaScript.",
+    type: "HTML",
+    image: "/projects/html/converter.png",
+    tech: ["HTML", "CSS", "JS"],
+    gitLink:
+      "https://github.com/rupam-dhote/HTML_CCS_JS_Projects/tree/main/converter",
+    appLink: "https://bin-hex-converter.vercel.app/",
+  },
+  {
+    title: "Pong game",
+    description:
+      "A classic Pong game built using HTML, CSS, and JavaScript where players control paddles to hit the ball and score points.",
+    type: "HTML",
+    image: "/projects/html/pong.png",
+    tech: ["HTML", "CSS", "JS"],
+    gitLink:
+      "https://github.com/rupam-dhote/HTML_CCS_JS_Projects/tree/main/pong_game_ref",
+    appLink: "https://pong-game-hygm.vercel.app/",
+  },
+  {
+    title: "Star Pattern Printer",
+    description:
+      "A star pattern printer built using HTML, CSS, and JavaScript that generates different star patterns based on user input.",
+    type: "HTML",
+    image: "/projects/html/pattern.png",
+    tech: ["HTML", "CSS", "JS"],
+    gitLink:
+      "https://github.com/rupam-dhote/HTML_CCS_JS_Projects/tree/main/pattern_printer",
+    appLink: "https://pattern-printer-html.vercel.app/",
+  },
+  {
+    title: "Particle Effect",
+    description:
+      "A particle effect animation built using HTML, CSS, and JavaScript that creates interactive particles following the mouse movement.",
+    type: "HTML",
+    image: "/projects/html/particle.png",
+    tech: ["HTML", "CSS", "JS"],
+    gitLink:
+      "https://github.com/rupam-dhote/HTML_CCS_JS_Projects/tree/main/particles",
+    appLink: "https://particle-effect-html.vercel.app/",
+  },
+
+  {
+    title: "To-Do List",
+    description:
+      "A simple To-Do List application built using HTML, CSS, and JavaScript to manage daily tasks efficiently.",
+    type: "HTML",
+    image: "/projects/html/todo.png",
+    tech: ["HTML", "CSS", "JS"],
+    gitLink:
+      "https://github.com/rupam-dhote/HTML_CCS_JS_Projects/tree/main/todolist",
+    appLink: "https://html-css-js-todo-list.vercel.app/",
+  },
+
+  {
+    title: "Calculator",
+    description:
+      "A responsive calculator developed with JavaScript that supports addition, subtraction, multiplication, and division.",
+    type: "HTML",
+    image: "/projects/html/calculator.png",
+    tech: ["HTML", "CSS", "JS"],
+    gitLink:
+      "https://github.com/rupam-dhote/HTML_CCS_JS_Projects/tree/main/calculator",
+    appLink: "https://html-ccs-js-calculator.vercel.app/",
+  },
+  {
+    title: "Pokemon Card Generator",
+    description:
+      "A web app that generates Pokémon cards dynamically using JavaScript and API data.",
+    type: "HTML",
+    image: "/projects/html/pokemon.png",
+    tech: ["HTML", "CSS", "JS"],
+    gitLink:
+      "https://github.com/rupam-dhote/HTML_CCS_JS_Projects/tree/main/pokemon%20card",
+    appLink: "https://pokemon-card-generate.vercel.app/",
   },
   {
     title: "TO-DO List CPP",
@@ -30,6 +116,8 @@ export const projects = [
     type: "C/CPP",
     image: "/projects/streamify.png",
     tech: ["C++"],
+    gitLink: "/",
+    appLink: "/",
   },
 ];
 

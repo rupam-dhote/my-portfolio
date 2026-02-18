@@ -47,7 +47,7 @@ const ProjectPage = () => {
                   initial={{ opacity: 0, y: -5 }}
                   whileInView={{ opacity: [0, 1], y: 0 }}
                   transition={{ duration: 1.3, delay: 1 }}
-                  viewport={{ once: true, amount: 0.6 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   className="grid md:grid-cols-3 gap-6 md:gap-4 "
                 >
                   {filtered.length === 0 ? (

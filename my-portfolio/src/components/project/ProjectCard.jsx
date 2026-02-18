@@ -28,13 +28,17 @@ const ProjectCard = ({ data }) => {
       </div>
       {/* buttons div */}
       <div className="flex gap-2  ">
-        <button className="transition-colors duration-100 border-none hover:from-indigo-500 hover:via-indigo-400 hover:to-indigo-300 rounded-full flex  items-center gap-1 md:gap-2 py-1 px-3 hover:cursor-pointer  text-sm bg-linear-to-r from-indigo-600 via-indigo-500 to-indigo-400">
-          <a href={"/"}>GitHub</a>
-        </button>
-        <button className=" transition-colors duration-100 border-none  rounded-full flex  items-center gap-0.5 py-1 px-3 hover:cursor-pointer text-sm bg-transparent hover:text-slate-400 hover:shadow-slate-500 shadow shadow-slate-500/80">
-          <a href="/">Demo</a>
-          <ArrowUpRight className="size-4" />
-        </button>
+        <a href={data.gitLink} target={data.gitLink === "/" ? "" : "_blank"}>
+          <button className="transition-colors duration-100 border-none hover:from-indigo-500 hover:via-indigo-400 hover:to-indigo-300 rounded-full flex  items-center gap-1 md:gap-2 py-1 px-3 hover:cursor-pointer  text-sm bg-linear-to-r from-indigo-600 via-indigo-500 to-indigo-400">
+            GitHub
+          </button>
+        </a>
+        <a href={data.appLink} target={data.appLink === "/" ? "" : "_blank"}>
+          <button className=" transition-colors duration-100 border-none  rounded-full flex  items-center gap-0.5 py-1 px-3 hover:cursor-pointer text-sm bg-transparent hover:text-slate-400 hover:shadow-slate-500 shadow shadow-slate-500/80">
+            Demo
+            <ArrowUpRight className="size-4" />
+          </button>
+        </a>
       </div>
     </div>
   );

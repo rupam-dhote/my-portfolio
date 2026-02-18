@@ -31,7 +31,7 @@ const Footer = () => {
           </span>
         </div>
       </div>
-      <div className="text-transparent bg-linear-to-l from-indigo-300 via-indigo-400 to-indigo-500 bg-clip-text md:font-bold px-2 md:px-0">
+      <div className="text-fg md:font-bold px-2 md:px-0">
         <p className="text-xs md:text-sm ">
           This Protfolio is created by Rupam with lots of{" "}
           <span className="drop-shadow-[0_0_8px_#f92e2e] text-red-400 animate-pulse p-1">
@@ -53,7 +53,7 @@ const Footer = () => {
           !
         </p>
         <p className="text-xs md:text-sm ">
-          Copyright © {new Date().getFullYear()} | All rights reservered.
+          Copyright © {new Date().getFullYear()} | All rights reserved.
         </p>
       </div>
     </footer>
