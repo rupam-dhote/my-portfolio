@@ -3,6 +3,7 @@ import { ArrowRight, ChevronDown, DownloadIcon } from "lucide-react";
 import Typing from "./hero/Typing.jsx";
 import MotionParticles from "./hero/MotionParticles.jsx";
 import Reveal from "./scrollAnimation/Reveal.jsx";
+import myResume from "../assets/Rupams-resume.pdf";
 
 const Hero = () => {
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
@@ -40,6 +41,7 @@ const Hero = () => {
       link: "https://www.w3schools.com/nodejs/",
     },
   ];
+
   return (
     <section
       id="home"
@@ -127,7 +129,13 @@ const Hero = () => {
                     <ArrowRight className="size-4" />
                   </button>
                 </a>
-                <button className="cursor-pointer transition-all active:scale-95 duration-200 border-none shadow shadow-slate-700 hover:shadow-slate-500 rounded-full flex  items-center gap-2 py-2 px-4 sm:px-6 md:px-8 bg-transparent text-sm">
+
+                <button
+                  onClick={() => {
+                    window.open(myResume, "_blank");
+                  }}
+                  className="cursor-pointer transition-all active:scale-95 duration-200 border-none shadow shadow-slate-700 hover:shadow-slate-500 rounded-full flex  items-center gap-2 py-2 px-4 sm:px-6 md:px-8 bg-transparent text-sm"
+                >
                   <DownloadIcon className="size-4" />
                   Resume
                 </button>

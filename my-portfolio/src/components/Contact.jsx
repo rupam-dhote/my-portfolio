@@ -120,20 +120,22 @@ const Contact = () => {
             delay={0.5}
             duration={1}
             direction="left"
-            className="hidden  md:flex flex-col w-1/2 gap-2 px-2 bg-slate-900/30"
+            className="hidden  md:flex flex-col w-1/2 justify-evenly gap-2 px-2 bg-slate-900/30"
           >
-            <img
-              src="./contactn.png"
-              className="w-[85%] h-80 mx-auto "
-              alt="Contact"
-            />
-            <Reveal
-              duration={1.2}
-              delay={1}
-              direction="left"
-              distance={150}
-              className="h-0.5 w-[90%] rounded-full mx-auto bg-linear-to-l from-violet-300 via-violet-400 to-violet-500"
-            />
+            <div>
+              <img
+                src="./contactn.png"
+                className="w-[85%]  mx-auto "
+                alt="Contact"
+              />
+              <Reveal
+                duration={1.2}
+                delay={1}
+                direction="left"
+                distance={150}
+                className="h-0.5 w-[90%] rounded-full mx-auto bg-linear-to-l from-violet-300 via-violet-400 to-violet-500"
+              />
+            </div>
             <Reveal
               delay={0.5}
               duration={1}
