@@ -140,7 +140,7 @@ const Hero = () => {
                     if (isDownload) {
                       const link = document.createElement("a");
                       link.href = myResume;
-                      link.download = "resume.pdf";
+                      link.download = "Rupams-resume.pdf";
                       link.click();
                     }
 
