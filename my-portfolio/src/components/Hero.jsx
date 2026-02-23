@@ -133,6 +133,17 @@ const Hero = () => {
 
                 <button
                   onClick={() => {
+                    const isDownload = window.confirm(
+                      "Do you want to download this resume ?",
+                    );
+
+                    if (isDownload) {
+                      const link = document.createElement("a");
+                      link.href = myResume;
+                      link.download = "resume.pdf";
+                      link.click();
+                    }
+
                     window.open(myResume, "_blank");
                   }}
                   className="cursor-pointer transition-all active:scale-95 duration-200 border-none shadow shadow-slate-700 hover:shadow-slate-500 rounded-full flex  items-center gap-2 py-2 px-4 sm:px-6 md:px-8 bg-transparent text-sm"
