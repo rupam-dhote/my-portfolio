@@ -4,7 +4,7 @@ import Typing from "./hero/Typing.jsx";
 import MotionParticles from "./hero/MotionParticles.jsx";
 import Reveal from "./scrollAnimation/Reveal.jsx";
 import myResume from "../assets/Rupams-resume.pdf";
-import myPic from "../assets/myPic.png";
+import myPic from "../assets/myPic2.png";
 
 const Hero = () => {
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
