@@ -4,6 +4,7 @@ import Typing from "./hero/Typing.jsx";
 import MotionParticles from "./hero/MotionParticles.jsx";
 import Reveal from "./scrollAnimation/Reveal.jsx";
 import myResume from "../assets/Rupams-resume.pdf";
+import myPic from "../assets/myPic.png";
 
 const Hero = () => {
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
@@ -61,7 +62,7 @@ const Hero = () => {
 
       {/* content div for the left and right part */}
       <div className="relative container mx-auto md:px-6 pt-32 z-10 ">
-        <div className=" grid md:grid-cols-2  lg:mb-10">
+        <div className=" grid md:grid-cols-2 md:gap-2 lg:mb-10">
           {/* Left part for  intro */}
           <div className="space-y-8">
             <Reveal direction="down" duration={1}>
@@ -198,9 +199,9 @@ const Hero = () => {
             <div className="relative bg-transparent md:backdrop-blur-xl p-2 rounded-3xl w-full">
               <div className="bg-bg/90 rounded-2xl overflow-hidden z-10">
                 <img
-                  src="./dummy_profile.png"
+                  src={myPic}
                   alt="my-pic"
-                  className="w-full aspect-4/5 object-cover rounded-2xl z-10 "
+                  className="w-full  max-h-98 aspect-4/5 object-cover rounded-2xl z-10 "
                 />
 
                 <div className="absolute -bottom-4 bg-bg/40 -right-4 rounded-xl px-4 py-3">
