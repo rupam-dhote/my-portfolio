@@ -5,7 +5,7 @@ export const projects = [
     description:
       "Streamify is a Real-time chat and video call platform for language learning with secure email verification.",
     type: "MERN",
-    image: "/projects/streamify.png",
+    image: "/projects/react/streamify.png",
     tech: ["React.js", "Node.js", "Express.js", "MongoDb"],
     gitLink: "/",
     appLink: "/",
@@ -15,7 +15,7 @@ export const projects = [
     description:
       "ResumeX is an AI-powered resume builder with resume upload, editing, and multiple template options.",
     type: "MERN",
-    image: "/projects/resume-builder.png",
+    image: "/projects/react/resume-builder.png",
     tech: ["React.js", "Node.js", "Express.js", "MongoDb"],
     gitLink: "/",
     appLink: "/",
@@ -112,12 +112,39 @@ export const projects = [
   },
   {
     title: "TO-DO List CPP",
-    description: "A TO-DO App which stores your data built with C++",
+    description:
+      "A To-Do application developed using C++ that enables users to manage daily tasks with data storage functionality.",
     type: "C/CPP",
-    image: "/projects/streamify.png",
+    image: "/projects/cpp/todo-cpp.png",
     tech: ["C++"],
-    gitLink: "/",
-    appLink: "/",
+    gitLink:
+      "http://github.com/rupam-dhote/CPP-Projects/blob/main/C%2B%2B%20Projects/to-do-cpp.cpp",
+    appLink:
+      "http://github.com/rupam-dhote/CPP-Projects/blob/main/C%2B%2B%20Projects/to-do-cpp.cpp",
+  },
+  {
+    title: "Tic-Tac-Toe CPP",
+    description:
+      "A console-based Tic Tac Toe game developed using C++ featuring two-player gameplay and win condition checking.",
+    type: "C/CPP",
+    image: "/projects/cpp/tictactoe-cpp.png",
+    tech: ["C++"],
+    gitLink:
+      "https://github.com/rupam-dhote/CPP-Projects/blob/main/C%2B%2B%20Projects/tictactoe.cpp",
+    appLink:
+      "https://github.com/rupam-dhote/CPP-Projects/blob/main/C%2B%2B%20Projects/tictactoe.cpp",
+  },
+  {
+    title: "Number Shifting Game C",
+    description:
+      "A console-based Number Shifting game built with C implementing tile movement logic and winning condition detection.",
+    type: "C/CPP",
+    image: "/projects/cpp/numbershift-c.png",
+    tech: ["C"],
+    gitLink:
+      "https://github.com/rupam-dhote/CPP-Projects/blob/main/C%2B%2B%20Projects/NumberShiftingGame.c",
+    appLink:
+      "https://github.com/rupam-dhote/CPP-Projects/blob/main/C%2B%2B%20Projects/NumberShiftingGame.c",
   },
 ];
 
@@ -262,7 +289,7 @@ export const connect = [
   {
     name: "GitHub",
     img: "./contact/github.png",
-    path: "/",
+    path: "https://github.com/rupam-dhote",
   },
   {
     name: "Linkedin",

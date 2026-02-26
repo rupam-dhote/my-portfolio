@@ -6,7 +6,7 @@ const ProjectCard = ({ data }) => {
       {/* image div */}
       <div className="relative rounded-lg overflow-hidden transition-all duration-200 group-hover:scale-102 ">
         <div className="absolute inset-0 group-hover:border border-white/40  bg-linear-to-tr from-transparent via-fg/20 to-transparent mix-blend-difference  -translate-x-full  group-hover:translate-x-0 transition-transform duration-400 rounded-lg ease-in-out" />
-        <img src={data.image} alt={data.title} />
+        <img src={data.image} alt={data.title} className="aspect-17/9" />
       </div>
 
       {/* heading and paragraph div */}

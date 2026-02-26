@@ -150,6 +150,7 @@ const Contact = () => {
                   {connect.map((con, i) => (
                     <a
                       key={i}
+                      target={con.path === "/" ? "" : "_blank"}
                       href={con.path}
                       className="gap-1 w-fit flex hover:drop-shadow-[0_0_12px_#477ad0] flex-col items-center justify-center group "
                     >
