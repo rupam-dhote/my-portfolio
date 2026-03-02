@@ -294,7 +294,7 @@ export const connect = [
   {
     name: "Linkedin",
     img: "./contact/linkedin.png",
-    path: "/",
+    path: "https://www.linkedin.com/in/rupam-dhote-7709822a3?utm_source=share&utm_campaign=share_via&utm_content=profile",
   },
   {
     name: "Instagram",
