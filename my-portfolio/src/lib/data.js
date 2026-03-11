@@ -7,8 +7,8 @@ export const projects = [
     type: "MERN",
     image: "/projects/react/streamify.png",
     tech: ["React.js", "Node.js", "Express.js", "MongoDb"],
-    gitLink: "/",
-    appLink: "/",
+    gitLink: "https://github.com/rupam-dhote/Video-Chat-app-Streamify/",
+    appLink: "https://video-chat-app-streamify.onrender.com/",
   },
   {
     title: "ResumeX ",
