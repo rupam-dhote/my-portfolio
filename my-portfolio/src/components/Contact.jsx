@@ -1,5 +1,6 @@
 import {
   AlertCircle,
+  BadgeCheck,
   CircleCheck,
   Loader2,
   Mail,
@@ -18,6 +19,10 @@ const Contact = () => {
     message: "",
   });
   const [isLoading, setLoding] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(
+    sessionStorage.getItem("formSubmitted") === "true",
+  );
+  console.log(isSubmitted);
   const [submitStatus, setSubmitStatus] = useState({
     type: null,
     message: "",
@@ -60,6 +65,10 @@ const Contact = () => {
         type: "success",
         message: "Message sent successfully! I'll get back to you soon.",
       });
+      setTimeout(() => {
+        setIsSubmitted(true);
+        sessionStorage.setItem("formSubmitted", "true");
+      }, 2000);
 
       // reset the form data if success
       setFormData({
@@ -168,144 +177,168 @@ const Contact = () => {
           </Reveal>
           {/* Right part for the form section */}
           <div className="w-full md:w-1/2 px-2">
-            <form onSubmit={handleSubmit}>
-              <div className="flex flex-col px-0 md:px-6 pb-4">
-                <Reveal
-                  group={true}
-                  delay={0.6}
-                  className="mt-5 flex flex-col gap-2"
-                >
-                  <motion.h2
-                    variants={rightTransition}
-                    className=" inline-block text-lg px-2 md:p-0 sm:text-2xl font-bold text-transparent bg-linear-to-l from-violet-300 via-violet-400 to-violet-500 bg-clip-text drop-shadow-[0_0_12px_#c751ef]"
-                  >
-                    Let's Build Something Together
-                  </motion.h2>
-                  <motion.p
-                    variants={rightTransition}
-                    className="text-xm sm:text-lg px-2 md:px-0 text-slate-600"
-                  >
-                    Got an idea, project, or collaboration in mind? Let’s
-                    connect and build something amazing together.
-                  </motion.p>
-                </Reveal>
-                <Reveal group={true} className="flex flex-col mt-6">
-                  {/* user Name */}
+            {isSubmitted ? (
+              <Reveal className="py-10 md:py-0 flex items-center justify-center h-full w-full">
+                <div className="flex flex-col items-center text-center max-w-md">
+                  <div className="relative mb-2 md:mb-4">
+                    <div className="absolute inset-0 bg-green-500/20 blur-xl rounded-full" />
+                    <BadgeCheck className="relative size-14 md:size-16 text-green-500" />
+                  </div>
 
-                  <motion.div
-                    variants={downTransition}
-                    className="flex items-center w-full bg-transparent border border-slate-800 h-12 rounded-lg overflow-hidden pl-4   shadow hover:cursor-pointer transition focus-within:shadow-slate-500"
-                  >
-                    <User className="size-5 text-gray-400" />
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData((prev) => ({
-                          ...prev,
-                          name: e.target.value,
-                        }))
-                      }
-                      autoComplete="off"
-                      placeholder="John joe"
-                      className="bg-transparent border-none ring-0 cursor-pointer text-gray-200 placeholder-gray-400 outline-none text-sm w-full h-full pl-2 "
-                      required
-                    />
-                  </motion.div>
+                  <h3 className="text-xl md:text-2xl font-semibold text-slate-100">
+                    Message Sent Successfully
+                  </h3>
 
-                  {/* Email */}
-                  <motion.div
-                    variants={downTransition}
-                    className="flex items-center mt-4 w-full bg-transparent border border-slate-800 h-12 rounded-lg overflow-hidden pl-4  shadow hover:cursor-pointer transition focus-within:shadow-gray-500"
-                  >
-                    <Mail className="size-5 text-gray-400" />
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData((prev) => ({
-                          ...prev,
-                          email: e.target.value,
-                        }))
-                      }
-                      autoComplete="off"
-                      placeholder="Email id"
-                      className="bg-transparent border-none ring-0 text-gray-200 placeholder-gray-400 outline-none text-sm w-full h-full cursor-pointer pl-2 "
-                      required
-                    />
-                  </motion.div>
+                  <p className="mt-2 text-slate-400 leading-relaxed">
+                    Thank you for reaching out. Your message has been received,
+                    and I'll get back to you as soon as possible.
+                  </p>
 
-                  {/* text area */}
-                  <motion.div
-                    variants={downTransition}
-                    className="flex  mt-4 w-full bg-transparent border border-slate-800 rounded-lg pl-2 gap-2  shadow hover:cursor-pointer transition focus-within:shadow-gray-400"
+                  <span className="mt-4 text-sm text-slate-500">
+                    Usually within 24–48 hours.
+                  </span>
+                </div>
+              </Reveal>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <div className="flex flex-col px-0 md:px-6 pb-4">
+                  <Reveal
+                    group={true}
+                    delay={0.6}
+                    className="mt-5 flex flex-col gap-2"
                   >
-                    <textarea
-                      rows={6}
-                      name="meassage"
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData((prev) => ({
-                          ...prev,
-                          message: e.target.value,
-                        }))
-                      }
-                      autoComplete="off"
-                      placeholder="write your message"
-                      className="bg-transparent border-none ring-0 text-gray-200 placeholder-gray-400 outline-none text-sm w-full h-full cursor-pointer resize-none pl-2 pt-2"
-                      required
-                    />
-                  </motion.div>
-                </Reveal>
-                <AnimatePresence>
-                  {submitStatus.type && (
+                    <motion.h2
+                      variants={rightTransition}
+                      className=" inline-block text-lg px-2 md:p-0 sm:text-2xl font-bold text-transparent bg-linear-to-l from-violet-300 via-violet-400 to-violet-500 bg-clip-text drop-shadow-[0_0_12px_#c751ef]"
+                    >
+                      Let's Build Something Together
+                    </motion.h2>
+                    <motion.p
+                      variants={rightTransition}
+                      className="text-xm sm:text-lg px-2 md:px-0 text-slate-600"
+                    >
+                      Got an idea, project, or collaboration in mind? Let’s
+                      connect and build something amazing together.
+                    </motion.p>
+                  </Reveal>
+                  <Reveal group={true} className="flex flex-col mt-6">
+                    {/* user Name */}
+
                     <motion.div
-                      key={submitStatus.type}
-                      initial={{ opacity: 0, y: -50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4 }}
-                      exit={{ opacity: 0, y: -50 }}
-                      className={` mx-auto flex items-center gap-3 px-4 py-2 md:py-1 rounded-xl  w-full mt-2  md:absolute md:top-24 md:left-1/2 md:-translate-x-1/2 md:w-fit
+                      variants={downTransition}
+                      className="flex items-center w-full bg-transparent border border-slate-800 h-12 rounded-lg overflow-hidden pl-4   shadow hover:cursor-pointer transition focus-within:shadow-slate-500"
+                    >
+                      <User className="size-5 text-gray-400" />
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            name: e.target.value,
+                          }))
+                        }
+                        autoComplete="off"
+                        placeholder="Your name"
+                        className="bg-transparent border-none ring-0 cursor-pointer text-gray-200 placeholder-gray-400 outline-none text-sm w-full h-full pl-2 "
+                        required
+                      />
+                    </motion.div>
+
+                    {/* Email */}
+                    <motion.div
+                      variants={downTransition}
+                      className="flex items-center mt-4 w-full bg-transparent border border-slate-800 h-12 rounded-lg overflow-hidden pl-4  shadow hover:cursor-pointer transition focus-within:shadow-gray-500"
+                    >
+                      <Mail className="size-5 text-gray-400" />
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            email: e.target.value,
+                          }))
+                        }
+                        autoComplete="off"
+                        placeholder="Your Email"
+                        className="bg-transparent border-none ring-0 text-gray-200 placeholder-gray-400 outline-none text-sm w-full h-full cursor-pointer pl-2 "
+                        required
+                      />
+                    </motion.div>
+
+                    {/* text area */}
+                    <motion.div
+                      variants={downTransition}
+                      className="flex  mt-4 w-full bg-transparent border border-slate-800 rounded-lg pl-2 gap-2  shadow hover:cursor-pointer transition focus-within:shadow-gray-400"
+                    >
+                      <textarea
+                        rows={6}
+                        name="meassage"
+                        value={formData.message}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            message: e.target.value,
+                          }))
+                        }
+                        autoComplete="off"
+                        placeholder="write your message"
+                        className="bg-transparent border-none ring-0 text-gray-200 placeholder-gray-400 outline-none text-sm w-full h-full cursor-pointer resize-none pl-2 pt-2"
+                        required
+                      />
+                    </motion.div>
+                  </Reveal>
+                  <AnimatePresence>
+                    {submitStatus.type && (
+                      <motion.div
+                        key={submitStatus.type}
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4 }}
+                        exit={{ opacity: 0, y: -50 }}
+                        className={` mx-auto flex items-center gap-3 px-4 py-2 md:py-1 rounded-xl  w-full mt-2  md:absolute md:top-24 md:left-1/2 md:-translate-x-1/2 md:w-fit
           ${
             submitStatus.type === "success"
               ? "bg-green-500/10 border border-green-500/30 text-green-400"
               : "bg-red-500/15 border border-red-500/30 text-red-400"
           }
           `}
-                    >
-                      {submitStatus.type === "success" ? (
-                        <CircleCheck />
-                      ) : (
-                        <AlertCircle />
-                      )}
-                      <p className="text-xs md:text-sm">
-                        {submitStatus.message}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-                <Reveal delay={0.6} duration={1} direction="right">
-                  <button
-                    type="submit"
-                    className="mt-6 w-full py-2 flex items-center justify-center gap-2 rounded-full text-white bg-indigo-500 hover:opacity-90 transition-all duration-200 cursor-pointer active:scale-95"
-                  >
-                    {isLoading ? (
-                      <>
-                        <Loader2 className="size-4 text-violet-200 animate-spin" />
-                        Sending..
-                      </>
-                    ) : (
-                      <>
-                        Message Me
-                        <Send className="size-4 text-violet-200" />
-                      </>
+                      >
+                        {submitStatus.type === "success" ? (
+                          <CircleCheck />
+                        ) : (
+                          <AlertCircle />
+                        )}
+                        <p className="text-xs md:text-sm">
+                          {submitStatus.message}
+                        </p>
+                      </motion.div>
                     )}
-                  </button>
-                </Reveal>
-              </div>
-            </form>
+                  </AnimatePresence>
+                  <Reveal delay={0.6} duration={1} direction="right">
+                    <button
+                      type="submit"
+                      className="mt-6 w-full py-2 flex items-center justify-center gap-2 rounded-full text-white bg-indigo-500 hover:opacity-90 transition-all duration-200 cursor-pointer active:scale-95"
+                    >
+                      {isLoading ? (
+                        <>
+                          <Loader2 className="size-4 text-violet-200 animate-spin" />
+                          Sending..
+                        </>
+                      ) : (
+                        <>
+                          Message Me
+                          <Send className="size-4 text-violet-200" />
+                        </>
+                      )}
+                    </button>
+                  </Reveal>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </div>
