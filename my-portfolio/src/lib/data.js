@@ -21,6 +21,17 @@ export const projects = [
     appLink: "/",
   },
   {
+    title: "Dice game ",
+    description:
+      "Dice Game is a React-based web game where users predict a dice number before rolling and earn points for correct guesses.",
+    type: "REACT",
+    image: "/projects/react/dice-game.png",
+    tech: ["React.js", "Styled components"],
+    gitLink:
+      "https://github.com/rupam-dhote/React_projects/tree/main/dice-game",
+    appLink: "https://react-dice-game-pro.vercel.app/",
+  },
+  {
     title: "Tic-Tac-Toe",
     description:
       "An interactive Tic Tac Toe game built with HTML, CSS, and JavaScript.",
