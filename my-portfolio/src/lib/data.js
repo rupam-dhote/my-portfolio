@@ -11,14 +11,14 @@ export const projects = [
     appLink: "https://video-chat-app-streamify.onrender.com/",
   },
   {
-    title: "ResumeX ",
+    title: "Task-Tracker",
     description:
-      "ResumeX is an AI-powered resume builder with resume upload, editing, and multiple template options.",
+      "TaskTracker is a MERN-based task manager with secure authentication, task creation, editing, search, filtering, and progress tracking.",
     type: "MERN",
-    image: "/projects/react/resume-builder.png",
+    image: "/projects/react/task-tracker.png",
     tech: ["React.js", "Node.js", "Express.js", "MongoDb"],
-    gitLink: "/",
-    appLink: "/",
+    gitLink: "https://github.com/rupam-dhote/Task-tracker/",
+    appLink: "https://task-tracker-me.vercel.app/",
   },
   {
     title: "Dice game ",
@@ -30,6 +30,16 @@ export const projects = [
     gitLink:
       "https://github.com/rupam-dhote/React_projects/tree/main/dice-game",
     appLink: "https://react-dice-game-pro.vercel.app/",
+  },
+  {
+    title: "ResumeX ",
+    description:
+      "ResumeX is an AI-powered resume builder with resume upload, editing, and multiple template options.",
+    type: "MERN",
+    image: "/projects/react/resume-builder.png",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDb"],
+    gitLink: "/",
+    appLink: "/",
   },
   {
     title: "Tic-Tac-Toe",
