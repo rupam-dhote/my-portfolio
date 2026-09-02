@@ -320,7 +320,7 @@ export const connect = [
   {
     name: "Instagram",
     img: "./contact/instagram.png",
-    path: "/",
+    path: "https://www.instagram.com/rupam_dhote_",
   },
   // {
   //   name: "X",
