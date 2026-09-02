@@ -16,7 +16,7 @@ const MotionParticles = () => {
   if (reduceMotion || viewport.w === 0) return null;
 
   const isMobile = viewport.w < 768;
-  const count = isMobile ? 15 : 35;
+  const count = isMobile ? 15 : 40;
 
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">

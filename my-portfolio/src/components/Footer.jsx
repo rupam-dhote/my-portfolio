@@ -4,11 +4,11 @@ import { connect } from "../lib/data.js";
 export default function Footer() {
   return (
     <motion.footer
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.4 }}
       transition={{ delay: 1, duration: 1 }}
-      className="bg-slate-900 border-t border-slate-600 mt-4 md:mt-10 "
+      className="bg-slate-900 border-t border-slate-600 mt-2 md:mt-10 "
     >
       <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* LEFT SIDE */}
@@ -30,7 +30,7 @@ export default function Footer() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="inline-block drop-shadow-[0_0_8px_#b6acac] text-fg  p-1"
+              className="inline-block drop-shadow-[0_0_8px_#b6acac] text-fg p-1"
             >
               💭
             </motion.span>
@@ -45,6 +45,7 @@ export default function Footer() {
               <a
                 key={i}
                 target={con.path === "/" ? "" : "_blank"}
+                rel="noopener noreferrer"
                 href={con.path}
                 className="gap-1 w-fit flex hover:drop-shadow-[0_0_12px_#477ad0] flex-col items-center justify-center group "
               >

@@ -308,7 +308,7 @@ export const skills = [
 // connection array
 export const connect = [
   {
-    name: "GitHub",
+    name: "Github",
     img: "./contact/github.png",
     path: "https://github.com/rupam-dhote",
   },
@@ -322,9 +322,9 @@ export const connect = [
     img: "./contact/instagram.png",
     path: "/",
   },
-  {
-    name: "X",
-    img: "./contact/twitter.png",
-    path: "/",
-  },
+  // {
+  //   name: "X",
+  //   img: "./contact/twitter.png",
+  //   path: "/",
+  // },
 ];
