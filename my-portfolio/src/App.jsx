@@ -12,21 +12,21 @@ const App = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden ">
-      <AnimatePresence mode="sync">
+      <BrowserRouter>
+        <ScrollToTop />
         {isLoading ? (
-          <Preloader key="preloader" progress={progress} />
+          <AnimatePresence mode="sync">
+            <Preloader progress={progress} />
+          </AnimatePresence>
         ) : (
-          <BrowserRouter key="app-router">
-            <ScrollToTop />
-            <Routes>
-              <Route path="/" element={<Layout />}>
-                <Route index element={<HomePage />} />
-                <Route path="projects" element={<ProjectPage />} />
-              </Route>
-            </Routes>
-          </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<HomePage />} />
+              <Route path="projects" element={<ProjectPage />} />
+            </Route>
+          </Routes>
         )}
-      </AnimatePresence>
+      </BrowserRouter>
     </div>
   );
 };

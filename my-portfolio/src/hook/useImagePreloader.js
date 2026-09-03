@@ -8,6 +8,7 @@ const defaultImages = [
   "/my-logo.png",
   "/herobg.png",
   "/contactn.png",
+  "/loaderbg.png",
   myPic,
   // Skill icons
   "/skills/react.png",

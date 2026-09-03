@@ -33,7 +33,6 @@ const Preloader = ({ progress }) => {
       exit={{
         opacity: 0,
         scale: 1.02,
-        filter: "blur(8px)",
         transition: { duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] },
       }}
       className=" fixed inset-0 z-99999 flex flex-col items-center justify-center  overflow-hidden select-none"
@@ -47,7 +46,6 @@ const Preloader = ({ progress }) => {
       {/* Background Ambient Glow Orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none animate-pulse" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-400/10 rounded-full blur-[80px] pointer-events-none" />
-
       {/* Main Preloader Content Box */}
       <div className="relative z-10 flex flex-col items-center gap-6 px-4 max-w-sm w-full">
         {/* Animated Brand Logo Badge */}
