@@ -15,7 +15,7 @@ const App = () => {
       <BrowserRouter>
         <ScrollToTop />
         {isLoading ? (
-          <AnimatePresence mode="sync">
+          <AnimatePresence mode="wait">
             <Preloader progress={progress} />
           </AnimatePresence>
         ) : (
